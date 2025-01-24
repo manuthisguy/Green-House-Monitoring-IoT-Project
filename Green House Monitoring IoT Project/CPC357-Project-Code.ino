@@ -130,7 +130,7 @@ void loop() {
 
   if(smokeValue > 1200)
   {
-  //  tone(buzzerPin, 1000); // 1000 Hz tone
+    tone(buzzerPin, 1000); // 1000 Hz tone
     Serial.print("Air: Polluted! \n");
 
     servo.write(120);
@@ -139,7 +139,7 @@ void loop() {
   }
   else if(smokeValue < 1200)
   {
-  //  noTone(buzzerPin); 
+    noTone(buzzerPin); 
     Serial.print("Air: Clear \n");
 
     digitalWrite(relayPin, false);
